@@ -8,6 +8,7 @@ from selenium import webdriver
 from selenium.common.exceptions import ElementNotInteractableException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 header = {
@@ -33,18 +34,21 @@ webdriver.DesiredCapabilities.CHROME['proxy'] = {
     "autodetect":False
 }
 
+cwd = os.getcwd()
+print(cwd)
 
-driver = webdriver.Chrome(executable_path="chromedriver.exe", desired_capabilities=webdriver.DesiredCapabilities.CHROME)
+# driver = webdriver.Chrome(executable_path="chromedriver", desired_capabilities=webdriver.DesiredCapabilities.CHROME)
 
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 url_list = [
     {
-        "url": "https://www.google.com.hk/search?q=%E8%94%AC%E8%8F%9C&newwindow=1&safe=strict&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjC7KDR0IvjAhVOzRoKHX-LBR0Q_AUIECgB&biw=1920&bih=969#imgrc=G2KeiGwmZFaMmM:",
-        "dir": "flesh"
+        "url": "https://www.google.com/search?q=cat&rlz=1C5CHFA_enUS888US888&oq=cat&aqs=chrome..69i57j35i39j46i175i199i512j0i512j0i433i512j69i60j69i61j69i60.1208j0j7&sourceid=chrome&ie=UTF-8",
+        "dir": "cat"
     },
     {
-        "url": "https://www.google.com/search?q=%E4%B8%8D%E6%96%B0%E9%B2%9C%E7%9A%84%E8%94%AC%E8%8F%9C&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj75fup5IvjAhWSsnEKHfc_Da0Q_AUIECgB",
-        "dir": "unflesh"
+        "url": "https://www.google.com/search?q=dog&rlz=1C5CHFA_enUS888US888&sxsrf=ALeKk02dOpRWP8huueO4Qi4R08Y0cOFKKQ%3A1628201460587&ei=9GEMYcqlI_7L1sQPw6mo-Ao&oq=dog&gs_lcp=Cgdnd3Mtd2l6EAMyBwgjEOoCECcyDQguEMcBEK8BEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECc6BwgjELADECc6BwgAEEcQsAM6CgguELADEMgDEENKBQg4EgExSgQIQRgAUL_7HVi2gh5gz4oeaAJwAngAgAF1iAF1kgEDMC4xmAEFoAEBsAEKyAEPwAEB&sclient=gws-wiz&ved=0ahUKEwjK77iN85ryAhX-pZUCHcMUCq8Q4dUDCA4&uact=5",
+        "dir": "dog"
     }
 ]
 
