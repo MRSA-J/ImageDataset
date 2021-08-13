@@ -44,11 +44,11 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 url_list = [
     {
         "url": "https://www.google.com/search?q=cat&rlz=1C5CHFA_enUS888US888&oq=cat&aqs=chrome..69i57j35i39j46i175i199i512j0i512j0i433i512j69i60j69i61j69i60.1208j0j7&sourceid=chrome&ie=UTF-8",
-        "dir": "cat"
+        "dir": "neural_cat"
     },
     {
         "url": "https://www.google.com/search?q=dog&rlz=1C5CHFA_enUS888US888&sxsrf=ALeKk02dOpRWP8huueO4Qi4R08Y0cOFKKQ%3A1628201460587&ei=9GEMYcqlI_7L1sQPw6mo-Ao&oq=dog&gs_lcp=Cgdnd3Mtd2l6EAMyBwgjEOoCECcyDQguEMcBEK8BEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECcyBwgjEOoCECc6BwgjELADECc6BwgAEEcQsAM6CgguELADEMgDEENKBQg4EgExSgQIQRgAUL_7HVi2gh5gz4oeaAJwAngAgAF1iAF1kgEDMC4xmAEFoAEBsAEKyAEPwAEB&sclient=gws-wiz&ved=0ahUKEwjK77iN85ryAhX-pZUCHcMUCq8Q4dUDCA4&uact=5",
-        "dir": "dog"
+        "dir": "neural_dog"
     }
 ]
 

@@ -5,7 +5,7 @@ import os
 import requests
 from webdriver_manager.chrome import ChromeDriverManager
 
-keyword = 'scissors'
+keyword = 'happy horse'
 url = 'https://www.google.com.hk/search?q='+keyword+'&tbm=isch'
 
 
@@ -28,7 +28,7 @@ class Crawler_google_images:
 
     #下载图片
     def download_images(self, browser,round=2):
-        picpath = './scissors'
+        picpath = './positive_horse'
         # 路径不存在时创建一个
         if not os.path.exists(picpath): os.makedirs(picpath)
         # 记录下载过的图片地址，避免重复下载
@@ -61,7 +61,7 @@ class Crawler_google_images:
                                 try:
                                     img_url_dic.append(img_url)
                                     #下载并保存图片到当前目录下
-                                    filename = "./scissors/" + str(count) + ".jpg"
+                                    filename = "./positive_horse/" + str(count) + ".jpg"
                                     r = requests.get(img_url)
                                     with open(filename, 'wb') as f:
                                         f.write(r.content)
